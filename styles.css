@@ -979,7 +979,7 @@ body {
 .social-link i {
   font-size: 24px;
   text-decoration: none;
-  color: black
+  color: black;
 }
 
 /* Google Logo */
@@ -996,31 +996,422 @@ body {
 }
 
 /* Responsive Design */
-@media (max-width: 900px) {
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  /* Laptops and small desktops */
+  .container {
+    height: 1000px;
+    max-width: 1200px;
+  }
+  
+  .knowledge-panel-about {
+    gap: var(--space-xxl);
+  }
+  
+  .kp-main {
+    max-width: 550px;
+  }
+  
+  .kp-sidebar {
+    max-width: 400px;
+    margin-right: 30px;
+  }
+  
+  .contact-content {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 1024px) {
+  /* Tablets landscape and small laptops */
+  .container {
+    height: 1000px;
+    max-width: 1000px;
+  }
+  
+  .portfolio-body {
+    padding: 20px;
+  }
+  
+  .knowledge-panel-about {
+    flex-direction: column;
+    gap: var(--space-xl);
+  }
+  
+  .kp-main {
+    max-width: 100%;
+  }
+  
+  .kp-sidebar {
+    max-width: 100%;
+    margin-right: 0;
+    max-height: none;
+  }
+  
+  .kp-profile-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .kp-profile-image {
+    margin-right: 0;
+    margin-bottom: var(--space-md);
+    align-self: center;
+  }
+  
   .contact-content {
     grid-template-columns: 1fr;
     gap: 40px;
   }
-
-  .form-row {
-    grid-template-columns: 1fr;
+  
+  .stack-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+  
+  .tab-item {
+    min-width: 160px;
+    padding: 0 var(--space-sm);
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+  /* Tablets portrait and large phones */
+  body {
+    padding: var(--space-sm);
+  }
+  
+  .container {
+    height: 900px;
+    border-radius: var(--radius-sm);
+  }
+  
+  .portfolio-body {
+    padding: 15px;
+  }
+  
+  .status-bar {
+    height: 32px;
+    padding: 0 var(--space-xs);
+  }
+  
+  .status-bar button {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .status-bar button img {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .search-bar {
+    height: 24px;
+    margin: 8px 8px;
+  }
+  
+  .tab-item {
+    min-width: 140px;
+    padding: 0 var(--space-xs);
+    font-size: var(--font-size-xs);
+  }
+  
+  .tab-item i {
+    font-size: 13px;
+  }
+  
+  .signature-logo {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  .signature-logo img {
+    width: 70px;
+  }
+  
+  .kp-profile-name {
+    font-size: 24px;
+  }
+  
+  .kp-projects-name {
+    font-size: 24px;
+  }
+  
   .contact-panel-container {
     padding: 20px;
   }
-
+  
   .contact-title {
-    font-size: 32px;
+    font-size: 36px;
   }
-
+  
   .contact-subtitle {
     font-size: 16px;
   }
-
+  
   .section-title {
     font-size: 20px;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .stack-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: var(--space-sm);
+  }
+  
+  .about-result-title {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Phones */
+  body {
+    padding: var(--space-xs);
+  }
+  
+  .container {
+    height: 900px;
+    border-radius: var(--radius-xs);
+  }
+  
+  .portfolio-body {
+    padding: 10px;
+  }
+  
+  .navigation-bar {
+    height: 30px;
+  }
+  
+  .status-bar {
+    height: 28px;
+  }
+  
+  .status-left,
+  .status-right {
+    gap: var(--space-xs);
+  }
+  
+  .status-bar button {
+    width: 22px;
+    height: 22px;
+  }
+  
+  .search-bar {
+    height: 22px;
+    padding: 0 var(--space-sm);
+    margin: 6px 6px;
+  }
+  
+  .tabs {
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  
+  .tabs::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .tab-item {
+    min-width: 120px;
+    font-size: 11px;
+  }
+  
+  .tab-item i {
+    font-size: 12px;
+  }
+  
+  .signature-logo img {
+    width: 60px;
+  }
+  
+  .kp-profile-image {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .kp-profile-name {
+    font-size: 20px;
+  }
+  
+  .kp-profile-meta-item {
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+  
+  .kp-profile-meta-label {
+    width: 100%;
+  }
+  
+  .contact-panel-container {
+    padding: 15px;
+  }
+  
+  .contact-header {
+    margin-bottom: 30px;
+  }
+  
+  .contact-title {
+    font-size: 28px;
+  }
+  
+  .contact-subtitle {
+    font-size: 14px;
+  }
+  
+  .section-title {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 12px;
+    font-size: 14px;
+  }
+  
+  .form-group label {
+    font-size: 14px;
+    top: 12px;
+    left: 12px;
+  }
+  
+  .submit-button {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+  
+  .contact-method {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-sm);
+  }
+  
+  .contact-icon {
+    align-self: center;
+  }
+  
+  .social-links {
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+  }
+  
+  .social-link {
+    width: 44px;
+    height: 44px;
+  }
+  
+  .social-link i {
+    font-size: 20px;
+  }
+  
+  .stack-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-sm);
+  }
+  
+  .stack-item {
+    padding: var(--space-sm);
+  }
+  
+  .project-buttons {
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+  
+  .project-button {
+    justify-content: center;
+    padding: 8px 12px;
+  }
+  
+  .google-logo {
+    margin-bottom: var(--space-lg);
+  }
+  
+  .google-logo-img {
+    height: 24px;
+  }
+}
+
+@media (max-width: 320px) {
+  /* Small phones */
+  .container {
+    height: 800px;
+  }
+  
+  .tab-item {
+    min-width: 100px;
+    font-size: 10px;
+    padding: 0 8px;
+  }
+  
+  .signature-logo {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  
+  .signature-logo img {
+    width: 50px;
+  }
+  
+  .contact-title {
+    font-size: 24px;
+  }
+  
+  .kp-profile-name {
+    font-size: 18px;
+  }
+}
+
+/* High-DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .signature-logo img {
+    image-rendering: -webkit-optimize-contrast;
+  }
+}
+
+/* Orientation-specific adjustments */
+@media (max-height: 500px) and (orientation: landscape) {
+  .container {
+    height: 400px;
+  }
+  
+  .portfolio-body {
+    padding: 10px;
+  }
+  
+  .knowledge-panel-about {
+    flex-direction: row;
+    gap: var(--space-lg);
+  }
+  
+  .kp-sidebar {
+    max-height: 350px;
+  }
+}
+
+/* Print styles */
+@media print {
+  .navigation-bar,
+  .status-bar,
+  .search-bar,
+  .tabs {
+    display: none;
+  }
+  
+  .portfolio-body {
+    background: white;
+    padding: 0;
+    overflow: visible;
+  }
+  
+  .panel {
+    display: block !important;
+    opacity: 1;
+    margin-bottom: 0;
   }
 }
