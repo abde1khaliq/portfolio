@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/3.0.0/uicons-thin-straight/css/uicons-thin-straight.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/3.0.0/uicons-thin-rounded/css/uicons-thin-rounded.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link href="styles.css" rel="stylesheet" />
+    <title>Abdelkhaliq</title>
+  </head>
+  <body>
+    <!-- Initial loading screen -->
+    <div class="initial-loading" id="initial-loading">
+      <div class="initial-loading-spinner"></div>
+    </div>
+
+    <div class="container">
+      <div class="navigation-bar">
+        <div class="tabs">
+          <div class="signature-logo">
+            <img
+              src="https://i.postimg.cc/7ZPTqcwr/signature2.png"
+              alt="Abdelkhaliq Logo"
+            />
+          </div>
+
+          <button
+            class="tab-item active"
+            data-index="0"
+            data-url="https://abdelkhaliq/about"
+          >
+            <i class="fi fi-tr-circle-user"></i>
+            <span>About Me</span>
+          </button>
+
+          <button
+            class="tab-item"
+            data-index="1"
+            data-url="https://abdelkhaliq/projects"
+          >
+            <i class="fi fi-ts-laptop-code"></i>
+            <span>My Projects</span>
+          </button>
+
+          <button
+            class="tab-item"
+            data-index="2"
+            data-url="https://abdelkhaliq/stack"
+          >
+            <i class="fi fi-tr-wrench-simple"></i>
+            <span>My Stack</span>
+          </button>
+
+          <button
+            class="tab-item"
+            data-index="3"
+            data-url="https://abdelkhaliq/contact"
+          >
+            <i class="fi fi-tr-phone-call"></i>
+            <span>Contact Me</span>
+          </button>
+        </div>
+      </div>
+      <div class="status-bar">
+        <div class="status-left">
+          <button>
+            <i class="fi fi-ts-arrow-left"></i>
+          </button>
+          <button>
+            <i class="fi fi-ts-arrow-right"></i>
+          </button>
+        </div>
+
+        <div class="search-bar">
+          <div class="input-wrapper">
+            <i class="fi fi-ts-info"></i>
+            <input type="text" id="q" placeholder="Search..." disabled/>
+          </div>
+        </div>
+
+        <div class="status-right">
+          <button>
+            <img src="https://i.postimg.cc/mr8HGtNC/reload.png" alt="Reload" />
+          </button>
+          <button>
+            <img src="https://i.postimg.cc/ZKtFHvfy/home.png" alt="Home" />
+          </button>
+        </div>
+      </div>
+
+      <div class="browser-holder">
+        <div class="portfolio-body">
+          <!-- Loading Overlay -->
+          <div class="loading-overlay" id="loading-overlay">
+            <div class="loading-spinner"></div>
+            <div class="loading-text">Loading...</div>
+          </div>
+
+          <!-- About Me Panel -->
+          <div class="panel" id="panel-0">
+            <div class="panel-content">
+              <!-- Google Logo -->
+              <div class="google-logo">
+                <img
+                  class="google-logo-img"
+                  src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+                  alt="Google"
+                />
+              </div>
+
+              <!-- Search Stats -->
+              <div class="google-search-stats-about">
+                About 4 results (0.12 seconds)
+              </div>
+
+              <!-- Knowledge Panel Layout -->
+              <div class="knowledge-panel-about">
+                <!-- Left: Search Results -->
+                <div class="kp-main">
+                  <!-- Featured Biography Snippet -->
+                  <div class="about-result">
+                    <div class="about-result-url">
+                      https://abdelkhaliq › about
+                    </div>
+                    <a href="#" class="about-result-title"
+                      >Ahmed Abdelkhaliq - Passionate Backend Developer</a
+                    >
+                    <div class="about-result-snippet">
+                      <strong>Ahmed Abdelkhaliq</strong> is a dedicated backend
+                      developer with a passion for crafting secure, scalable
+                      digital solutions. With expertise in
+                      <strong>Django, Python, and database architecture</strong
+                      >, he transforms complex problems into elegant, efficient
+                      code. Currently expanding his skills while studying at
+                      Victoria College, Ahmed combines academic knowledge with
+                      hands-on development experience to deliver robust
+                      applications.
+                    </div>
+                  </div>
+
+                  <!-- Technical Skills Result -->
+                  <div class="about-result">
+                    <div class="about-result-url">
+                      https://abdelkhaliq › skills
+                    </div>
+                    <a href="#" class="about-result-title"
+                      >Technical Expertise & Development Approach</a
+                    >
+                    <div class="about-result-snippet">
+                      Specializes in <strong>backend development</strong> with a
+                      focus on creating RESTful APIs, optimizing database
+                      performance, and implementing security best practices.
+                      Combines technical proficiency with a problem-solving
+                      mindset to build applications that are not just
+                      functional, but performant and secure. Enjoys tackling
+                      challenging backend problems and finding innovative
+                      solutions.
+                    </div>
+                  </div>
+
+                  <!-- Experience & Education Result -->
+                  <div class="about-result">
+                    <div class="about-result-url">
+                      https://abdelkhaliq › background
+                    </div>
+                    <a href="#" class="about-result-title"
+                      >Education & Continuous Growth Journey</a
+                    >
+                    <div class="about-result-snippet">
+                      Currently pursuing education at
+                      <strong>Victoria College</strong> while actively building
+                      real-world development experience through personal
+                      projects and collaborations. This dual approach allows
+                      Ahmed to stay at the forefront of modern web technologies
+                      while applying theoretical knowledge to practical
+                      challenges. Committed to continuous learning and
+                      professional growth in the ever-evolving tech landscape.
+                    </div>
+                  </div>
+
+                  <!-- Development Philosophy Result -->
+                  <div class="about-result">
+                    <div class="about-result-url">
+                      https://abdelkhaliq › philosophy
+                    </div>
+                    <a href="#" class="about-result-title"
+                      >Development Philosophy & Future Aspirations</a
+                    >
+                    <div class="about-result-snippet">
+                      Believes in writing
+                      <strong>clean, maintainable code</strong> that stands the
+                      test of time. Passionate about creating systems that are
+                      both powerful and elegant, with a focus on scalability and
+                      security. Enjoys contributing to open-source projects and
+                      collaborating with other developers. Looking forward to
+                      joining a dynamic team where he can contribute his backend
+                      expertise while continuing to grow as a developer.
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Right: Knowledge Panel -->
+                <div class="kp-sidebar">
+                  <div class="kp-profile-header">
+                    <img
+                      class="kp-profile-image"
+                      src="https://i.postimg.cc/hPHMzB40/me.jpg"
+                      alt="Abdelkhaliq"
+                    />
+                    <div class="kp-profile-info">
+                      <div class="kp-profile-name">Ahmed Abdelkhaliq</div>
+                      <div class="kp-profile-title">Back-end Developer</div>
+                      <div class="kp-profile-description">
+                        Passionate backend developer specializing in Django,
+                        Python, and scalable system architecture. Dedicated to
+                        creating secure, efficient digital solutions with clean,
+                        maintainable code. Currently expanding skills while
+                        studying at Victoria College.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="kp-profile-meta">
+                    <div class="kp-profile-meta-item">
+                      <div class="kp-profile-meta-label">Profession</div>
+                      <div class="kp-profile-meta-value">Backend Developer</div>
+                    </div>
+                    <div class="kp-profile-meta-item">
+                      <div class="kp-profile-meta-label">Education</div>
+                      <div class="kp-profile-meta-value">Victoria College</div>
+                    </div>
+                    <div class="kp-profile-meta-item">
+                      <div class="kp-profile-meta-label">Location</div>
+                      <div class="kp-profile-meta-value">Alexandria, Egypt</div>
+                    </div>
+                    <div class="kp-profile-meta-item">
+                      <div class="kp-profile-meta-label">Experience</div>
+                      <div class="kp-profile-meta-value">1+ years</div>
+                    </div>
+                  </div>
+
+                  <div class="kp-profile-links">
+                    <div class="kp-profile-links-title">Profiles</div>
+
+                    <a
+                      href="https://github.com/abde1khaliq"
+                      class="kp-profile-link"
+                      target="_blank"
+                    >
+                      <i class="bx bxl-github kp-profile-link-icon"></i>
+                      <span class="kp-profile-link-text">GitHub</span>
+                    </a>
+
+                    <a
+                      href="https://www.linkedin.com/in/ahmed-abdelkhaliq-32355133a/"
+                      class="kp-profile-link"
+                      target="_blank"
+                    >
+                      <i class="bx bxl-linkedin kp-profile-link-icon"></i>
+                      <span class="kp-profile-link-text">LinkedIn</span>
+                    </a>
+
+                    <a
+                      href="https://x.com/abde1khaliq"
+                      class="kp-profile-link"
+                      target="_blank"
+                    >
+                      <i class="bx bxl-twitter kp-profile-link-icon"></i>
+                      <span class="kp-profile-link-text">Twitter</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- My Projects Panel -->
+          <div class="panel" id="panel-1">
+            <div class="panel-content">
+              <!-- Google Logo -->
+              <div class="google-logo">
+                <img
+                  class="google-logo-img"
+                  src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+                  alt="Google"
+                />
+              </div>
+
+              <!-- Search Stats -->
+              <div class="google-search-stats-about">
+                About 2 results (0.18 seconds)
+              </div>
+
+              <!-- Knowledge Panel Layout -->
+              <div class="knowledge-panel-about">
+                <!-- Left: Search Results -->
+                <div class="kp-main">
+                  <!-- Project 1 -->
+                  <div class="about-result">
+                    <div class="about-result-url">
+                      https://github.com/abde1khaliq/vireon
+                    </div>
+                    <a
+                      href="https://youtu.be/6b2xKeDb3B4?si=_Id7nc7kZyIDKZ4l"
+                      target="_blank"
+                      class="about-result-title"
+                      >Vireon - Advanced Security System API</a
+                    >
+                    <div class="about-result-snippet">
+                      A comprehensive moderation API built with Django REST
+                      Framework, designed to secure online communities with
+                      AI-driven analysis and content detection. Features robust
+                      user authentication with JWT, advanced filtering
+                      capabilities, and a complete product management system.
+                      This project demonstrates expertise in building scalable,
+                      secure backend systems with real-world applications.
+                    </div>
+                    <div class="project-tech-tags">
+                      <span class="project-tech-tag">Python</span>
+                      <span class="project-tech-tag"
+                        >Django REST Framework</span
+                      >
+                      <span class="project-tech-tag">Mysql</span>
+                      <span class="project-tech-tag">JavaScript</span>
+                      <span class="project-tech-tag">JWT Authentication</span>
+                      <span class="project-tech-tag">API Development</span>
+                    </div>
+                    <div class="project-buttons">
+                      <a
+                        href="https://youtu.be/6b2xKeDb3B4?si=_Id7nc7kZyIDKZ4l"
+                        target="_blank"
+                        class="project-button demo"
+                      >
+                        <i class="fi fi-ts-play"></i>
+                        Live Demo
+                      </a>
+                      <a
+                        href="https://github.com/abde1khaliq/Vireon"
+                        target="_blank"
+                        class="project-button source"
+                      >
+                        <i class="bx bxl-github"></i>
+                        Source Code
+                      </a>
+                    </div>
+                  </div>
+
+                  <!-- Project 2 -->
+                  <div class="about-result">
+                    <div class="about-result-url">
+                      https://github.com/abde1khaliq/Wordify
+                    </div>
+                    <a
+                      href="https://github.com/abde1khaliq/Wordify"
+                      target="_blank"
+                      class="about-result-title"
+                      >Wordify - PDF to Word Converter</a
+                    >
+                    <div class="about-result-snippet">
+                      A user-friendly desktop application that converts PDF
+                      files into editable Word documents with high accuracy.
+                      Built with Python and CustomTkinter, Wordify features a
+                      clean, modern interface and works completely offline. This
+                      project showcases the ability to create practical tools
+                      that solve real problems while maintaining clean code
+                      architecture and excellent user experience.
+                    </div>
+                    <div class="project-tech-tags">
+                      <span class="project-tech-tag">Python</span>
+                      <span class="project-tech-tag">Tkinter</span>
+                      <span class="project-tech-tag">Desktop App</span>
+                      <span class="project-tech-tag">File Processing</span>
+                    </div>
+                    <div class="project-buttons">
+                      <a
+                        href="https://github.com/abde1khaliq/Wordify/releases/tag/v1.1"
+                        target="_blank"
+                        class="project-button demo"
+                      >
+                        <i class="fi fi-ts-play"></i>
+                        Live Demo
+                      </a>
+                      <a
+                        href="https://github.com/abde1khaliq/Wordify"
+                        target="_blank"
+                        class="project-button source"
+                      >
+                        <i class="bx bxl-github"></i>
+                        Source Code
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Right: Knowledge Panel -->
+                <div class="kp-sidebar">
+                  <div class="kp-projects-header">
+                    <div class="kp-projects-name">Abdelkhaliq's Projects</div>
+                    <div class="kp-projects-description">
+                      A collection of projects showcasing backend development
+                      expertise, API design, database architecture, and
+                      practical problem-solving abilities. Each project
+                      demonstrates a different aspect of modern software
+                      development.
+                    </div>
+                  </div>
+
+                  <div class="kp-projects-meta">
+                    <div class="kp-projects-meta-item">
+                      <div class="kp-projects-meta-label">Total Projects</div>
+                      <div class="kp-projects-meta-value">2+</div>
+                    </div>
+                    <div class="kp-projects-meta-item">
+                      <div class="kp-projects-meta-label">Primary Stack</div>
+                      <div class="kp-projects-meta-value">
+                        Django, Python, Django REST Framework, JWT, JavaScript
+                      </div>
+                    </div>
+                    <div class="kp-projects-meta-item">
+                      <div class="kp-projects-meta-label">Database</div>
+                      <div class="kp-projects-meta-value">
+                        MySQL, PostgreSQL, SQLite
+                      </div>
+                    </div>
+                    <div class="kp-projects-meta-item">
+                      <div class="kp-projects-meta-label">APIs</div>
+                      <div class="kp-projects-meta-value">
+                        REST, Third-party Integration
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="kp-projects-featured">
+                    <div class="kp-projects-featured-title">
+                      Featured Projects
+                    </div>
+
+                    <div class="kp-projects-featured-item">
+                      <a
+                        href="https://github.com/abde1khaliq/Vireon"
+                        target="_blank"
+                        class="kp-projects-featured-name"
+                        >Vireon - Security API</a
+                      >
+                      <div class="kp-projects-featured-desc">
+                        Advanced moderation API with AI-driven content detection
+                        and comprehensive user management system.
+                      </div>
+                    </div>
+
+                    <div class="kp-projects-featured-item">
+                      <a
+                        href="https://github.com/abde1khaliq/Wordify"
+                        target="_blank"
+                        class="kp-projects-featured-name"
+                        >Wordify - PDF Converter</a
+                      >
+                      <div class="kp-projects-featured-desc">
+                        Desktop application for converting PDF files to editable
+                        Word documents with a clean, modern interface.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- My Stack Panel -->
+          <div class="panel" id="panel-2">
+            <div class="panel-content">
+              <!-- Knowledge Panel Layout -->
+              <div class="knowledge-panel-about">
+                <!-- Left: Search Results -->
+                <div class="kp-main">
+                  <!-- Backend Technologies -->
+                  <div class="stack-category">
+                    <div class="stack-category-title">Backend Stack</div>
+                    <div class="stack-grid">
+                      <!-- Python -->
+                      <div class="stack-item">
+                        <div class="stack-item-header">
+                          <div class="stack-item-icon">
+                            <i
+                              class="bx bxl-python"
+                              style="color: #3776ab; font-size: 24px"
+                            ></i>
+                          </div>
+                          <div class="stack-item-name">Python</div>
+                        </div>
+                        <div class="stack-item-description">
+                          Primary programming language for backend development,
+                          API creation, automation, and data processing. Expert
+                          in writing clean, efficient Python code.
+                        </div>
+                        <a
+                          href="https://python.org"
+                          target="_blank"
+                          class="stack-item-link"
+                          >python.org</a
+                        >
+                      </div>
+
+                      <!-- Django -->
+                      <div class="stack-item">
+                        <div class="stack-item-header">
+                          <div class="stack-item-icon">
+                            <i
+                              class="bx bxl-django"
+                              style="color: #092e20; font-size: 24px"
+                            ></i>
+                          </div>
+                          <div class="stack-item-name">Django</div>
+                        </div>
+                        <div class="stack-item-description">
+                          High-level Python web framework for rapid development,
+                          clean design, and robust security features. Experience
+                          building scalable applications.
+                        </div>
+                        <a
+                          href="https://djangoproject.com"
+                          target="_blank"
+                          class="stack-item-link"
+                          >djangoproject.com</a
+                        >
+                      </div>
+
+                      <!-- Django REST Framework -->
+                      <div class="stack-item">
+                        <div class="stack-item-header">
+                          <div class="stack-item-icon">
+                            <i
+                              class="bx bx-code-alt"
+                              style="color: #8b0000; font-size: 24px"
+                            ></i>
+                          </div>
+                          <div class="stack-item-name">
+                            Django REST Framework
+                          </div>
+                        </div>
+                        <div class="stack-item-description">
+                          Powerful toolkit for building Web APIs with Django.
+                          Experience creating RESTful APIs with authentication,
+                          serialization, and viewsets.
+                        </div>
+                        <a
+                          href="https://www.django-rest-framework.org"
+                          target="_blank"
+                          class="stack-item-link"
+                          >django-rest-framework.org</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Frontend Technologies -->
+                  <div class="stack-category">
+                    <div class="stack-category-title">Frontend</div>
+                    <div class="stack-grid">
+                      <!-- React -->
+                      <div class="stack-item">
+                        <div class="stack-item-header">
+                          <div class="stack-item-icon">
+                            <i
+                              class="bx bxl-react"
+                              style="color: #61dafb; font-size: 24px"
+                            ></i>
+                          </div>
+                          <div class="stack-item-name">React</div>
+                        </div>
+                        <div class="stack-item-description">
+                          JavaScript library for building user interfaces,
+                          particularly single-page applications. Familiar with
+                          component-based architecture.
+                        </div>
+                        <a
+                          href="https://reactjs.org"
+                          target="_blank"
+                          class="stack-item-link"
+                          >reactjs.org</a
+                        >
+                      </div>
+
+                      <!-- JavaScript -->
+                      <div class="stack-item">
+                        <div class="stack-item-header">
+                          <div class="stack-item-icon">
+                            <i
+                              class="bx bxl-javascript"
+                              style="color: #f7df1e; font-size: 24px"
+                            ></i>
+                          </div>
+                          <div class="stack-item-name">JavaScript</div>
+                        </div>
+                        <div class="stack-item-description">
+                          Programming language for interactive web pages and
+                          server-side development. Experience with modern ES6+
+                          features and asynchronous programming.
+                        </div>
+                        <a
+                          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+                          target="_blank"
+                          class="stack-item-link"
+                          >MDN Web Docs</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Databases -->
+                  <div class="stack-category">
+                    <div class="stack-category-title">Databases</div>
+                    <div class="stack-grid">
+                      <!-- MySQL -->
+                      <div class="stack-item">
+                        <div class="stack-item-header">
+                          <div class="stack-item-icon">
+                            <i
+                              class="bx bx-data"
+                              style="color: #4479a1; font-size: 24px"
+                            ></i>
+                          </div>
+                          <div class="stack-item-name">MySQL</div>
+                        </div>
+                        <div class="stack-item-description">
+                          Open-source relational database management system.
+                          Experience with database design, optimization, and
+                          complex query writing.
+                        </div>
+                        <a
+                          href="https://mysql.com"
+                          target="_blank"
+                          class="stack-item-link"
+                          >mysql.com</a
+                        >
+                      </div>
+
+                      <!-- PostgreSQL -->
+                      <div class="stack-item">
+                        <div class="stack-item-header">
+                          <div class="stack-item-icon">
+                            <i
+                              class="bx bx-data"
+                              style="color: #336791; font-size: 24px"
+                            ></i>
+                          </div>
+                          <div class="stack-item-name">PostgreSQL</div>
+                        </div>
+                        <div class="stack-item-description">
+                          Advanced open-source relational database with strong
+                          emphasis on extensibility and SQL compliance.
+                          Experience with advanced features and performance
+                          tuning.
+                        </div>
+                        <a
+                          href="https://postgresql.org"
+                          target="_blank"
+                          class="stack-item-link"
+                          >postgresql.org</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Panel -->
+          <div class="panel" id="panel-3">
+            <div class="panel-content">
+              <div class="contact-panel-container">
+                <div class="contact-header">
+                  <h1 class="contact-title">Let's Connect</h1>
+                  <p class="contact-subtitle">
+                    Interested in working together or have a question? Get in
+                    touch with me!
+                  </p>
+                </div>
+
+                <div class="contact-content">
+                  <!-- Contact Form -->
+                  <div class="contact-form-section">
+                    <h2 class="section-title">Send Me a Message</h2>
+                    <form class="contact-form" id="contact-form">
+                      <div class="form-row">
+                        <div class="form-group">
+                          <input type="text" id="name" name="name" required />
+                          <label for="name">Your Name</label>
+                        </div>
+                        <div class="form-group">
+                          <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            required
+                          />
+                          <label for="email">Your Email</label>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <input
+                          type="text"
+                          id="subject"
+                          name="subject"
+                          required
+                        />
+                        <label for="subject">Subject</label>
+                      </div>
+                      <div class="form-group">
+                        <textarea
+                          id="message"
+                          name="message"
+                          rows="5"
+                          required
+                        ></textarea>
+                        <label for="message">Your Message</label>
+                      </div>
+                      <button type="submit" class="submit-button">
+                        <i class="fi fi-ts-paper-plane"></i>
+                        Send Message
+                      </button>
+                    </form>
+                  </div>
+
+                  <!-- Contact Information -->
+                  <div class="contact-info-section">
+                    <h2 class="section-title">Get In Touch</h2>
+
+                    <div class="contact-methods">
+                      <div class="contact-method">
+                        <div class="contact-icon">
+                          <i class="bx bx-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                          <h3>Email</h3>
+                          <a href="mailto:abdelkhaliq.dev@gmail.com"
+                            >ahmedthek3@gmail.com</a
+                          >
+                        </div>
+                      </div>
+
+                      <div class="contact-method">
+                        <div class="contact-icon">
+                          <i class="bx bx-map"></i>
+                        </div>
+                        <div class="contact-details">
+                          <h3>Location</h3>
+                          <p>Alexandria, Egypt</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="social-section">
+                      <h3 class="social-title">Follow Me</h3>
+                      <div class="social-links">
+                        <a
+                          href="https://github.com/abde1khaliq"
+                          target="_blank"
+                          class="social-link"
+                        >
+                          <i class="bx bxl-github"></i>
+                        </a>
+                        <a
+                          href="https://www.linkedin.com/in/ahmed-abdelkhaliq-32355133a/"
+                          target="_blank"
+                          class="social-link"
+                        >
+                          <i class="bx bxl-linkedin"></i>
+                        </a>
+                        <a
+                          href="https://x.com/abde1khaliq"
+                          target="_blank"
+                          class="social-link"
+                        >
+                          <i class="bx bxl-twitter"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script src="script.js"></script>
