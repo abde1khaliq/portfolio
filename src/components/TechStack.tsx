@@ -24,11 +24,6 @@ const techStackCategories = [
       { name: "Python", icon: "https://skillicons.dev/icons?i=py" },
       { name: "Django", icon: "https://skillicons.dev/icons?i=django" },
       { name: "FastAPI", icon: "https://skillicons.dev/icons?i=fastapi" },
-      {
-        name: "SQLAlchemy",
-        icon: "https://i.postimg.cc/VvVc94PF/SQLAlchemy.png",
-      },
-      { name: "JWT", icon: "https://skillicons.dev/icons?i=jwt" },
     ],
   },
   {
