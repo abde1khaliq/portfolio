@@ -117,7 +117,7 @@ const Footer = () => {
         gap={4}
       >
         <Text fontSize="xs" color="gray.600" fontFamily="monospace">
-          © 2025 Ahmed Abdelkhaliq. All rights reserved.
+          © 2026 Ahmed Abdelkhaliq. All rights reserved.
         </Text>
         <HStack gap={{ base: 4, md: 6 }}>
           <Text fontSize="xs" color="gray.600" fontFamily="monospace">
