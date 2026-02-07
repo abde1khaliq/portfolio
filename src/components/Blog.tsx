@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Flex, HStack, Text, VStack } from "@chakra-ui/react";
+import { Box, Flex, HStack, Span, Text, VStack } from "@chakra-ui/react";
 import fadeIn, { fadeInUp } from "@/app/utils/animations";
 
 const blogPosts = [
@@ -26,10 +26,13 @@ const Blog = () => {
           fontFamily="monospace"
           textTransform="uppercase"
         >
-          Latest Articles
+          My Blog Posts
         </Text>
         <Text fontSize="xs" color="gray.600" fontFamily="monospace">
-          {blogPosts.length} Posts
+          <Span fontSize={"20px"} color="#10b981">
+            {blogPosts.length.toString().padStart(2, "0")}
+          </Span>{" "}
+          Posts
         </Text>
       </HStack>
       <VStack gap={0} align="stretch">

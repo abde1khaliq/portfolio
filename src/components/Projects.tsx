@@ -1,6 +1,14 @@
 "use client";
 
-import { Box, Flex, HStack, VStack, Text, Button } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  HStack,
+  VStack,
+  Text,
+  Button,
+  Span,
+} from "@chakra-ui/react";
 import Link from "next/link";
 import fadeIn, { fadeInUp } from "@/app/utils/animations";
 
@@ -58,10 +66,13 @@ const Projects = () => {
           fontFamily="monospace"
           textTransform="uppercase"
         >
-          Featured Projects
+          My Projects
         </Text>
         <Text fontSize="xs" color="gray.600" fontFamily="monospace">
-          {projects.length.toString().padStart(2, "0")} Projects
+          <Span fontSize={"20px"} color="#10b981">
+            {projects.length.toString().padStart(2, "0")}
+          </Span>{" "}
+          Projects
         </Text>
       </HStack>
       <VStack gap={{ base: 3, md: 4 }} align="stretch">

@@ -1,14 +1,20 @@
-import { Box, Grid, HStack, Text, Image } from "@chakra-ui/react";
+"use client";
+
+import { Box, Grid, HStack, Text, Image, Span } from "@chakra-ui/react";
 import fadeIn, { fadeInUp } from "@/app/utils/animations";
 
 const techStack = [
   { name: "JavaScript", icon: "https://skillicons.dev/icons?i=js" },
   { name: "TypeScript", icon: "https://skillicons.dev/icons?i=ts" },
   { name: "React", icon: "https://skillicons.dev/icons?i=react" },
-  { name: "Next.js", icon: "https://skillicons.dev/icons?i=nextjs" },
   { name: "Tailwind", icon: "https://skillicons.dev/icons?i=tailwind" },
+  { name: "Bootstrap", icon: "https://skillicons.dev/icons?i=bootstrap" },
+  { name: "Next.js", icon: "https://skillicons.dev/icons?i=nextjs" },
+  { name: "Vite", icon: "https://skillicons.dev/icons?i=vite" },
+  { name: "Npm", icon: "https://skillicons.dev/icons?i=npm" },
   { name: "Node.js", icon: "https://skillicons.dev/icons?i=nodejs" },
   { name: "Bun", icon: "https://skillicons.dev/icons?i=bun" },
+  { name: "Vercel", icon: "https://skillicons.dev/icons?i=vercel" },
   { name: "Python", icon: "https://skillicons.dev/icons?i=py" },
   { name: "Django", icon: "https://skillicons.dev/icons?i=django" },
   { name: "FastAPI", icon: "https://skillicons.dev/icons?i=fastapi" },
@@ -18,11 +24,10 @@ const techStack = [
   { name: "PostgreSQL", icon: "https://skillicons.dev/icons?i=postgres" },
   { name: "Supabase", icon: "https://skillicons.dev/icons?i=supabase" },
   { name: "Redis", icon: "https://skillicons.dev/icons?i=redis" },
-  { name: "Vercel", icon: "https://skillicons.dev/icons?i=vercel" },
   { name: "GitHub", icon: "https://skillicons.dev/icons?i=github" },
   { name: "Git", icon: "https://skillicons.dev/icons?i=git" },
   { name: "Linux", icon: "https://skillicons.dev/icons?i=linux" },
-  { name: "Vite", icon: "https://skillicons.dev/icons?i=vite" },
+
   {
     name: "Fedora",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fedora/fedora-original.svg",
@@ -44,10 +49,13 @@ const TechStack = () => {
           fontFamily="monospace"
           textTransform="uppercase"
         >
-          Tech Stack
+          Tech Stack & Technology I use
         </Text>
         <Text fontSize="xs" color="gray.600" fontFamily="monospace">
-          {techStack.length} Technologies
+          <Span fontSize={"20px"} color="#10b981">
+            {techStack.length}
+          </Span>{" "}
+          Technologies
         </Text>
       </HStack>
       <Grid

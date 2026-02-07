@@ -87,7 +87,7 @@ const NavBar = () => {
               BRANCH:
             </Text>
             <Text color="#10b981" fontSize="11px" fontFamily="monospace">
-              main
+              development
             </Text>
           </HStack>
         </HStack>
@@ -110,7 +110,7 @@ const NavBar = () => {
                 <Box w="2.5px" h="10px" bg="white" />
               </Box>
               <Text color="gray.600" fontSize="11px" fontFamily="monospace">
-                120ms
+                82ms
               </Text>
             </HStack>
             <HStack gap={1.5} alignItems="center">
