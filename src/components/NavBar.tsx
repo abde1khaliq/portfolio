@@ -1,9 +1,13 @@
 "use client";
 
 import { Box, Button, Flex, Text, HStack } from "@chakra-ui/react";
-import { slideDown } from "@/app/utils/animations";
+import { ChevronLeft } from "lucide-react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const NavBar = () => {
+  const pathname = usePathname();
+
   return (
     <Box
       as="nav"
@@ -17,7 +21,6 @@ const NavBar = () => {
       position="sticky"
       top={0}
       zIndex={1000}
-      animation={`${slideDown} 0.6s ease-out`}
     >
       <Flex
         w="100%"
@@ -40,7 +43,13 @@ const NavBar = () => {
             fontSize={{ base: "lg", md: "xl" }}
             fontFamily="monospace"
           >
-            +
+            {pathname !== "/" ? (
+              <Link href="/">
+                <ChevronLeft />
+              </Link>
+            ) : (
+              <span>+</span>
+            )}
           </Box>
           <Box
             h="full"
