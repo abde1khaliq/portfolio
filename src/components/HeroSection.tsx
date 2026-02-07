@@ -35,7 +35,7 @@ const HeroSection = () => {
             mb={6}
             lineHeight="1.1"
           >
-            Full-Stack Developer
+            Junior Full-Stack Developer
             <br />
             Building Scalable Systems
           </Text>

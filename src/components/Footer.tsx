@@ -1,4 +1,4 @@
-import { Box, Grid, VStack, Text, HStack, Flex } from "@chakra-ui/react";
+import { Box, Grid, VStack, Text, HStack, Flex, Link } from "@chakra-ui/react";
 import fadeIn from "@/app/utils/animations";
 
 const Footer = () => {
@@ -42,15 +42,30 @@ const Footer = () => {
             Social
           </Text>
           <VStack align="start" gap={2}>
-            <Text fontSize="sm" color="white" fontFamily="monospace">
+            <Link
+              href="https://github.com/abde1khaliq"
+              fontSize="sm"
+              color="white"
+              fontFamily="monospace"
+            >
               GitHub
-            </Text>
-            <Text fontSize="sm" color="white" fontFamily="monospace">
-              LinkedIn
-            </Text>
-            <Text fontSize="sm" color="white" fontFamily="monospace">
+            </Link>
+            <Link
+              href="https://www.linkedin.com/in/ahmed-abdelkhaliq-32355133a/"
+              fontSize="sm"
+              color="white"
+              fontFamily="monospace"
+            >
+              Linkedin
+            </Link>
+            <Link
+              href="https://x.com/abde1khaliq"
+              fontSize="sm"
+              color="white"
+              fontFamily="monospace"
+            >
               Twitter
-            </Text>
+            </Link>
           </VStack>
         </VStack>
 
