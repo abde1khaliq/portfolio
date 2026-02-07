@@ -8,10 +8,10 @@ const projects = [
   {
     id: "001",
     title: "Vireon - Security / Moderation API",
-    desc: "A moderation API made with care & love by Abdelkhaliq, built for real-world impact. It leverages AI-driven analysis and detection, designed for scalability and open collaboration.",
+    desc: "A moderation API made with care & love by me, built for real-world impact. It leverages AI-driven analysis and detection, designed for scalability and open collaboration.",
     stack: "Djangorestframework · Python · MySQL · Gemini API",
     status: "Open Source",
-    demoUrl: "https://github.com/abde1khaliq/Vireon",
+    demoUrl: "https://www.youtube.com/watch?v=6b2xKeDb3B4&t=5s",
     sourceUrl: "https://github.com/abde1khaliq/Vireon",
   },
   {
@@ -31,6 +31,15 @@ const projects = [
     status: "Open Source · Deprecated",
     demoUrl: "https://github.com/abde1khaliq/Wordify/releases/tag/v1.1",
     sourceUrl: "https://github.com/abde1khaliq/Wordify",
+  },
+  {
+    id: "004",
+    title: "Fync - Chatting Application",
+    desc: "Fync was a challenging project, I challenged myself to make a chatting app that uses vanilla JS (Chaos) and Djangorestframework as my backend",
+    stack: "Djangorestframework · Python · Vanilla JS · Tailwind",
+    status: "Open Source · Not Functional",
+    demoUrl: "https://github.com/abde1khaliq/Fync",
+    sourceUrl: "https://github.com/abde1khaliq/Fync",
   },
 ];
 
