@@ -1,8 +1,35 @@
 "use client";
 import { Box, Grid, HStack, Text, Image, Span } from "@chakra-ui/react";
 import fadeIn, { fadeInUp } from "@/app/utils/animations";
+import { keyframes } from "@emotion/react";
+
+const pulse = keyframes`
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+`;
 
 const techStackCategories = [
+  {
+    category: "Backend",
+    technologies: [
+      { name: "Python", icon: "https://skillicons.dev/icons?i=py" },
+      { name: "Django", icon: "https://skillicons.dev/icons?i=django" },
+      {
+        name: "FastAPI",
+        icon: "https://skillicons.dev/icons?i=fastapi",
+        learning: true,
+      },
+      {
+        name: "GraphQL",
+        icon: "https://skillicons.dev/icons?i=graphql",
+        learning: true,
+      },
+    ],
+  },
   {
     category: "Frontend",
     technologies: [
@@ -16,36 +43,36 @@ const techStackCategories = [
       { name: "Npm", icon: "https://skillicons.dev/icons?i=npm" },
       { name: "Bun", icon: "https://skillicons.dev/icons?i=bun" },
       { name: "Node.js", icon: "https://skillicons.dev/icons?i=nodejs" },
-    ],
-  },
-  {
-    category: "Backend",
-    technologies: [
-      { name: "Python", icon: "https://skillicons.dev/icons?i=py" },
-      { name: "Django", icon: "https://skillicons.dev/icons?i=django" },
-      { name: "FastAPI", icon: "https://skillicons.dev/icons?i=fastapi" },
+      {
+        name: "Apollo",
+        icon: "https://skillicons.dev/icons?i=apollo",
+        learning: true,
+      },
     ],
   },
   {
     category: "Databases",
     technologies: [
-      { name: "MongoDB", icon: "https://skillicons.dev/icons?i=mongodb" },
-      { name: "MySQL", icon: "https://skillicons.dev/icons?i=mysql" },
       { name: "SQLite", icon: "https://skillicons.dev/icons?i=sqlite" },
+      { name: "MySQL", icon: "https://skillicons.dev/icons?i=mysql" },
+      { name: "MongoDB", icon: "https://skillicons.dev/icons?i=mongodb" },
       { name: "PostgreSQL", icon: "https://skillicons.dev/icons?i=postgres" },
       { name: "Supabase", icon: "https://skillicons.dev/icons?i=supabase" },
-      { name: "Redis", icon: "https://skillicons.dev/icons?i=redis" },
+      {
+        name: "Redis",
+        icon: "https://skillicons.dev/icons?i=redis",
+      },
     ],
   },
   {
     category: "DevOps & Tools I use",
     technologies: [
+      { name: "VS Code", icon: "https://skillicons.dev/icons?i=vscode" },
       { name: "Git", icon: "https://skillicons.dev/icons?i=git" },
       { name: "GitHub", icon: "https://skillicons.dev/icons?i=github" },
       { name: "Vercel", icon: "https://skillicons.dev/icons?i=vercel" },
       { name: "Linux", icon: "https://skillicons.dev/icons?i=linux" },
       { name: "Postman", icon: "https://skillicons.dev/icons?i=postman" },
-      { name: "VS Code", icon: "https://skillicons.dev/icons?i=vscode" },
       {
         name: "Fedora",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fedora/fedora-original.svg",
@@ -74,7 +101,7 @@ const TechStack = () => {
           fontFamily="monospace"
           textTransform="uppercase"
         >
-          Tech Stack & Technology I use
+          My Tech Stack, presented in the sequence of my learning journey
         </Text>
         <Text fontSize="xs" color="gray.600" fontFamily="monospace">
           <Span fontSize={"20px"} color="#10b981">
@@ -110,9 +137,9 @@ const TechStack = () => {
                 key={i}
                 p={{ base: 3, md: 4 }}
                 border="1px solid"
-                borderColor="gray.900"
+                borderColor={tech.learning ? "#10b981" : "gray.900"}
                 _hover={{
-                  borderColor: "gray.600",
+                  borderColor: tech.learning ? "#10b981" : "gray.600",
                   bg: "#050505",
                 }}
                 transition="all 0.2s"
@@ -123,7 +150,36 @@ const TechStack = () => {
                 flexDirection="column"
                 alignItems="center"
                 gap={2}
+                position="relative"
               >
+                {tech.learning && (
+                  <>
+                    <Box
+                      position="absolute"
+                      top={2}
+                      right={2}
+                      w="8px"
+                      h="8px"
+                      borderRadius="full"
+                      bg="#10b981"
+                      animation={`${pulse} 2s ease-in-out infinite`}
+                    />
+                    <Text
+                      position="absolute"
+                      top={-3}
+                      left="50%"
+                      transform="translateX(-50%)"
+                      fontSize="2xs"
+                      color="#10b981"
+                      fontFamily="monospace"
+                      whiteSpace="nowrap"
+                      bg="black"
+                      px={2}
+                    >
+                      Currently Learning
+                    </Text>
+                  </>
+                )}
                 <Image
                   src={tech.icon}
                   alt={tech.name}
