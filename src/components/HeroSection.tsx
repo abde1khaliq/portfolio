@@ -90,6 +90,24 @@ const HeroSection = () => {
                 Read My Blog
               </Button>
             </Link>
+            <Link href="/courses">
+              <Button
+                bg="transparent"
+                color="white"
+                h="48px"
+                px={8}
+                borderRadius="0"
+                fontSize="sm"
+                fontWeight="bold"
+                textTransform="uppercase"
+                border="1px solid"
+                borderColor="gray.900"
+                w={{ base: "full", sm: "auto" }}
+                _hover={{ borderColor: "gray.600" }}
+              >
+                Courses
+              </Button>
+            </Link>
           </Flex>
         </Box>
 
