@@ -5,9 +5,14 @@ import fadeIn, { fadeInUp } from "@/app/utils/animations";
 
 const blogPosts = [
   {
-    date: "2026.02.07",
-    title: "Just Finished Building My new portfolio.",
-    readTime: "8 min",
+    date: "Sunday, February 8, 2026",
+    title:
+      "Today was a milestone — I dove into the world of GraphQL and started exploring Apollo for dynamic data fetching on the frontend, while experimenting with Strawberry on the backend. The ability to shape responses precisely around queries feels liberating compared to the rigidness of REST. GraphQL isn’t just powerful; it’s actually fun to use, and right now it feels like my much‑needed breather from the endless grind of RESTful APIs.",
+  },
+  {
+    date: "Saturday, February 7, 2026",
+    title:
+      "Just wrapped up building my brand‑new portfolio to showcase my journey, projects, and the skills I’ve been sharpening. Seeing everything come together in one place feels like a huge step forward in defining my developer identity.",
   },
 ];
 
@@ -62,14 +67,6 @@ const Blog = () => {
                   {post.title}
                 </Text>
               </VStack>
-              <Text
-                fontSize="xs"
-                color="gray.600"
-                fontFamily="monospace"
-                flexShrink={0}
-              >
-                {post.readTime}
-              </Text>
             </Flex>
           </Box>
         ))}
